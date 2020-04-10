@@ -129,6 +129,9 @@ export default {
 
           }).then(response => {
             console.log(response.data)
+            MessageBox.alert('上报成功').then(action => {
+              this.$router.back(-1)
+            })
 
           }).catch(function (error) {
             console.log('error', error)
